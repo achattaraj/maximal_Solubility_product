@@ -1,0 +1,59 @@
+begin model
+
+begin parameters
+kd	3500
+kon	1.000000
+koff	3500
+end parameters
+
+begin molecule types
+poly_A(a1,a2,a3,a4,a5)
+poly_B(b1,b2,b3,b4,b5)
+end molecule types
+
+begin seed species
+1 poly_A(a1,a2,a3,a4,a5) 600
+2 poly_B(b1,b2,b3,b4,b5) 600
+end seed species
+
+begin observables
+Molecules tot_poly_A poly_A()
+Molecules free_poly_A poly_A(a1,a2,a3,a4,a5)
+Molecules tot_poly_B poly_B()
+Molecules free_poly_B poly_B(b1,b2,b3,b4,b5)
+end observables
+
+begin functions
+end functions
+
+begin reaction rules
+Rule_65:  poly_A(a1) + poly_B(b1) <-> poly_A(a1!1).poly_B(b1!1)  kon, koff
+Rule_66:  poly_A(a1) + poly_B(b2) <-> poly_A(a1!1).poly_B(b2!1)  kon, koff
+Rule_67:  poly_A(a1) + poly_B(b3) <-> poly_A(a1!1).poly_B(b3!1)  kon, koff
+Rule_68:  poly_A(a1) + poly_B(b4) <-> poly_A(a1!1).poly_B(b4!1)  kon, koff
+Rule_69:  poly_A(a1) + poly_B(b5) <-> poly_A(a1!1).poly_B(b5!1)  kon, koff
+Rule_70:  poly_A(a2) + poly_B(b1) <-> poly_A(a2!1).poly_B(b1!1)  kon, koff
+Rule_71:  poly_A(a2) + poly_B(b2) <-> poly_A(a2!1).poly_B(b2!1)  kon, koff
+Rule_72:  poly_A(a2) + poly_B(b3) <-> poly_A(a2!1).poly_B(b3!1)  kon, koff
+Rule_73:  poly_A(a2) + poly_B(b4) <-> poly_A(a2!1).poly_B(b4!1)  kon, koff
+Rule_74:  poly_A(a2) + poly_B(b5) <-> poly_A(a2!1).poly_B(b5!1)  kon, koff
+Rule_75:  poly_A(a3) + poly_B(b1) <-> poly_A(a3!1).poly_B(b1!1)  kon, koff
+Rule_76:  poly_A(a3) + poly_B(b2) <-> poly_A(a3!1).poly_B(b2!1)  kon, koff
+Rule_77:  poly_A(a3) + poly_B(b3) <-> poly_A(a3!1).poly_B(b3!1)  kon, koff
+Rule_78:  poly_A(a3) + poly_B(b4) <-> poly_A(a3!1).poly_B(b4!1)  kon, koff
+Rule_79:  poly_A(a3) + poly_B(b5) <-> poly_A(a3!1).poly_B(b5!1)  kon, koff
+Rule_80:  poly_A(a4) + poly_B(b1) <-> poly_A(a4!1).poly_B(b1!1)  kon, koff
+Rule_81:  poly_A(a4) + poly_B(b2) <-> poly_A(a4!1).poly_B(b2!1)  kon, koff
+Rule_82:  poly_A(a4) + poly_B(b3) <-> poly_A(a4!1).poly_B(b3!1)  kon, koff
+Rule_83:  poly_A(a4) + poly_B(b4) <-> poly_A(a4!1).poly_B(b4!1)  kon, koff
+Rule_84:  poly_A(a4) + poly_B(b5) <-> poly_A(a4!1).poly_B(b5!1)  kon, koff
+Rule_85:  poly_A(a5) + poly_B(b1) <-> poly_A(a5!1).poly_B(b1!1)  kon, koff
+Rule_86:  poly_A(a5) + poly_B(b2) <-> poly_A(a5!1).poly_B(b2!1)  kon, koff
+Rule_87:  poly_A(a5) + poly_B(b3) <-> poly_A(a5!1).poly_B(b3!1)  kon, koff
+Rule_88:  poly_A(a5) + poly_B(b4) <-> poly_A(a5!1).poly_B(b4!1)  kon, koff
+Rule_89:  poly_A(a5) + poly_B(b5) <-> poly_A(a5!1).poly_B(b5!1)  kon, koff
+end reaction rules
+
+end model
+
+writeXML()
