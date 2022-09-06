@@ -2,7 +2,7 @@
 """
 Created on Tue Apr 28 00:45:57 2020
 
-@author: achattaraj
+@author: Ani Chattaraj
 """
 import re, sys, ast, os
 import numpy as np
@@ -113,7 +113,6 @@ class BoundFraction_NFsim:
         plt.ylabel('Bound fraction', fontsize=14)
         plt.xticks([0,1,2,3,4], labels=['0','10','$10^2$','$10^3$','$10^4$'])
         plt.yticks([0,0.5,1])
-        #plt.title('FTC = 2000 uM (Inter + Intra)', fontsize=16)
         plt.title(label, fontsize=16)
         plt.legend(fontsize=16)
         plt.show()
