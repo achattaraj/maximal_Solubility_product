@@ -5,4 +5,4 @@ We perform stochastic rule based simulations using two solvers - SpringSaLaD and
  - We define the NFsim model using the Virtual Cell graphical interface and then launch multiple simulations using the batch file called "submit_nfsim.sh". The data analysis part is summarized by "NFsim_analysis.ipynb" inside the NFsim folder.
 
 
-To use the code, simply [clone] (https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) the repository to your local machine.
+To use the code, simply <a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository" target="_top">clone</a> the repository to your local machine.
