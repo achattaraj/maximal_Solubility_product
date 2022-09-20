@@ -176,7 +176,7 @@ class NFSim_output_analyzer:
                 if not (line == '\n' or re.search('Time', line) or re.search('Sink', line) or re.search('Source', line)):
                     cluster, count = line.split()
                     comp = tuple([cluster.count(mol) for mol in molecules])
-                    cs = len(cluster.split('.')) + 1 # monomer does not have bonds (.)
+                    cs = cluster.count('.') + 1 # monomer does not have bonds (.)
                     
                     clus_stat[cs].append(int(count))
                     comp_stat[cs].append(comp)
@@ -293,14 +293,11 @@ class NFSim_output_analyzer:
 '''
 if __name__ == '__main__':
     
-    paths = glob('C:/Users/chatt/Desktop/pytest/NFsim/test_dataset/FTC_A5_B5_30uM_with_cb')
+    paths = glob('C:/Users/chatt/Desktop/SP_max/v2/maximal_Solubility_product/NFsim/test_dataset/FTC_A5_B5_*uM_*_cb')
     N = len(paths)
     
-    #c2mf = [200.0, 100.0, 66.66, 50.0, 40.0, 33.33, 28.57, 25.0, 22.22, 20.0]
     for i, path in enumerate(paths):
         molecules = ['poly_A', 'poly_B']
-        #molecules = ['poly_SH3', 'poly_PRM']
-        #molecules = ['Nephrin', 'Nck', 'NWASP']
         
         nfs_obj = NFSim_output_analyzer(path)
         print(nfs_obj)
@@ -309,7 +306,6 @@ if __name__ == '__main__':
             nfs_obj.process_speciesfiles(molecules,calcRatio=False,printProgress=True)
         except:
             print('Incomplete: ', path)
-            
-        #nfs_obj.ProgressBar('progress', (i+1)/N, length=40)
-'''    
+'''        
+   
          
