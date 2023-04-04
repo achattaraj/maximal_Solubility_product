@@ -1,5 +1,5 @@
 # maximal_Solubility_product
-### Method section of the [Biophysical Journal](https://www.cell.com/biophysj/pdf/S0006-3495(23)00209-6.pdf) paper - "The maximum solubility product marks the threshold for condensation of multivalent biomolecules".
+### Method section of the [Biophysical Journal Paper](https://www.cell.com/biophysj/pdf/S0006-3495(23)00209-6.pdf) - "The maximum solubility product marks the threshold for condensation of multivalent biomolecules".
 We perform stochastic rule based simulations using two solvers - SpringSaLaD and NFsim. We perform multiple stochastic trials and analyze them to get average properties of the system.
  - We define the springsalad model using the in-built graphical interface and then launch multiple simulations using the batch file called "submit_ssalad.sh". The data analysis part is summarized by "ssalad_analysis.ipynb" inside the springsalad folder.
  - We define the NFsim model using the Virtual Cell graphical interface and then launch multiple simulations using the batch file called "submit_nfsim.sh". The data analysis part is summarized by "NFsim_analysis.ipynb" inside the NFsim folder.
